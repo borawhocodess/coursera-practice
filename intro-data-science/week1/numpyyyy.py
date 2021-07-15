@@ -86,3 +86,25 @@ print(a[:,[0,2,4]])
 print(a[:,-1])
 print(a[:,-1].mean())
 
+
+
+
+
+
+
+
+#quiz
+
+print("---------------------------------")
+
+a1 = np.random.rand(4)
+a2 = np.random.rand(4, 1)
+a3 = np.array([[1, 2, 3, 4]])
+a4 = np.arange(1, 4, 1)
+a5 = np.linspace(1, 4, 4)
+
+print(a1, a1.shape, a1.ndim)
+print(a2, a2.shape, a2.ndim)
+print(a3, a3.shape, a3.ndim)
+print(a4, a4.shape, a4.ndim)
+print(a5, a5.shape, a5.ndim)

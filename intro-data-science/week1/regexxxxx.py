@@ -36,7 +36,7 @@ print(re.findall("A*", a))
 print(re.findall("[A]+", a))
 print(re.findall("A+", a))
 
-with open("ferpa.txt", "r") as file:
+with open("datasets/ferpa.txt", "r") as file:
 	wiki = file.read()
 	#print(wiki)
 
@@ -68,3 +68,21 @@ for item in re.finditer("(?P<title>[\w ]*)(?P<edit_link>\[edit\])", wiki):
 	print(item.groupdict())
 	print(item.groupdict()["title"])
 
+print("------------------------------------------")
+
+pattern = """
+(?P<title>[\w ]*)		#wiki title
+(?P<edit_link>\[edit\])	#unnecesarry link """
+
+for item in re.finditer(pattern, wiki, re.VERBOSE):
+	print(item.groupdict())
+	print(item.groupdict()["title"])
+
+
+with open("datasets/Health-News-Tweets/Health-Tweets/nytimeshealth.txt", "r") as file:
+	health = file.read()
+	#print(health)
+
+pattern = '#[\w\d]*(?=\s)'
+
+print(re.findall(pattern, health))
