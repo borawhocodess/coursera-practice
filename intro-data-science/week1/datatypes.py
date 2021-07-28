@@ -1,6 +1,11 @@
 def patato_fun():
 	print("patato is fun")
 
+melih = "melih"
+
+for i in melih:
+	print(i)
+
 tup = (1, 'z', None, 1.0, patato_fun, ('x', 2), [1, 2], [1, "papa"], {"anne" : 1, "baba" : 2})
 
 for i in tup:
